@@ -1,0 +1,64 @@
+{% extends "registrasi/base.html" %}
+{% block content %}
+<br><br>
+<script src="http://202.169.224.53/static/scripts/registrasi.js"></script>
+
+<div class="row white">
+    <div class="large-12 columns">
+        <h2>User Registration</h2><br><br>
+    </div>
+</div>
+
+<div class="row white">
+    <div class="columns large-12">
+        <form method="POST" id="registrasi-post">
+            {% csrf_token %}
+                <input type="hidden" name="mode" id="mode">
+            <center>
+            <table style="margin-top:-50px;border:none">
+            <tr>
+            <td>
+                <input type="checkbox" class="text" style="-moz-appearance:none;width:30px;height:30px;" name="text" id="text">
+            </td>
+            <td>
+                <label style="margin-left:-10px;margin-bottom:15px;font-size:20px">Text</label>
+            </td>
+            <td>
+                <input type="checkbox" style="-moz-appearance:none;width:30px;height:30px;" name="image" id="image">
+            </td>
+            <td>
+                <label style="margin-left:-10px;margin-bottom:15px;font-size:20px">Image</label>
+            </td>
+            <td>
+                <input type="checkbox" style="-moz-appearance:none;width:30px;height:30px;" name="video" id="video">
+            </td>
+            <td>
+                <label style="margin-left:-10px;margin-bottom:15px;font-size:20px">Video</label>
+            </td>
+            <td>
+                <input type="submit" style="font-size: 20px;margin-bottom:15px;" value="Register" class="tiny button">
+            <!--<button style="margin-top:5px;font-size: 20px;" value="Execute" type="button" id="execute" class="tiny button">Execute</button>-->
+            </td>
+            </tr>
+            </table>
+            </center>
+            </form>
+    </div>
+</div>
+<!-- The feed -->
+<div class="row white">
+    <div class="columns large-12">
+        <div style="margin-left:20px" id="registrasi">
+            <!--{% for post in all_posts %}
+                <li>
+                    <strong>{{ post.text }}</strong> -
+                    <em>{{ post.author }}</em> -
+                    <span>{{ post.created }}</span> -
+                    <a id='delete-post-{{post.id}}'>delete me</a>
+                </li>
+            {% endfor %}
+        -->
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,10 @@
+#!/home/yosuaalvin/django-form-fun/bin/python
+# EASY-INSTALL-ENTRY-SCRIPT: 'langid==1.1.5','console_scripts','langid'
+__requires__ = 'langid==1.1.5'
+import sys
+from pkg_resources import load_entry_point
+
+if __name__ == '__main__':
+    sys.exit(
+        load_entry_point('langid==1.1.5', 'console_scripts', 'langid')()
+    )

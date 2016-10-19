@@ -1,0 +1,24 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE|default:"en-us" }}">
+<head>
+<meta charset="UTF-8">
+<title>{% block title %}User Registered{% endblock %}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="http://202.169.224.53/css/bootstrap.css" rel="stylesheet">
+<link href="http://202.169.224.53/css/bootstrap-theme.css" rel="stylesheet">
+<link href="http://202.169.224.53/css/jquery-ui.css" rel="stylesheet">
+<script src="http://202.169.224.53/js/jquery-1.11.1.min.js"></script>
+<script src="http://202.169.224.53/js/bootstrap.js"></script>
+<script src="http://202.169.224.53/js/jquery-ui.js"></script>
+{% block extrahead %}{% endblock %}
+</head>
+<body>
+
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+
+</body>
+</html>

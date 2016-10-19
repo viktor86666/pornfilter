@@ -1,0 +1,27 @@
+{% load staticfiles %}
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block head %}
+
+    {% endblock %}
+    <link rel="stylesheet" href="http://202.169.224.53/static/scripts/foundation.css" />
+    <script src="http://202.169.224.53/static/scripts/modernizr.js"></script>
+  </head>
+  <body>
+
+    <div class='row'>
+      {% block content %}
+      {% endblock %}
+    </div>
+
+    <script src="http://202.169.224.53/static/scripts/jquery.js"></script>
+    <script src="http://202.169.224.53/static/scripts/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>

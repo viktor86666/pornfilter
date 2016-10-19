@@ -1,0 +1,147 @@
+{% extends "talk/base.html" %}
+{% block content %}
+<br><br>
+<div class="row white">
+    <div class="large-12 columns">
+        <table style="border:none">
+        <tr>
+        <td>
+        <a target="_blank" href="/user">User Administration</a>
+        </td>
+        <td>
+        <a href="/logout">Logout</a>
+        </td>
+	<td>
+	</td>
+	<td>
+	</td>
+	<td>
+	</td>
+	<td>
+	</td>
+	<td>
+	</td>
+	<td>
+	</td>
+	<td>
+	</td>
+	<td>
+	</td>
+	<td>
+	</td>
+	<td>
+	</td>
+	<td>
+	</td>
+	<td>
+	</td>
+	<td>
+	</td>
+	<td>
+	</td>
+	<td>
+	</td>
+	<td>
+	</td>
+	<td>
+	</td>
+	<td>
+	</td>
+	<td>
+	</td>
+	<td>
+	</td>
+	<td>
+	</td>
+	<td>
+	</td>
+	<td>
+	</td>
+	<td>
+	</td>
+	<td>
+	</td>
+	<td>
+	</td>
+	<td>
+	</td>
+	<td>
+	</td>
+	<td>
+	</td>
+	<td>
+	<a target="_blank" href="http://bit.ly/secsurf">Questionnaire</a>
+	</td>
+        </tr>
+        </table>
+        <center>
+        <img src="http://202.169.224.53/static/logo.png" width="100px" height="100px">
+        <h2>Content Filtering Web Application</h2>
+        </center>
+    </div>
+</div>
+
+<div class="row white">
+    <div class="columns large-12">
+        <form method="POST" id="post-form">
+            {% csrf_token %}
+            <table style="border:none">
+            <tr>
+            <td>
+            <div class="fieldWrapper" id="the_post" style="width:850px">
+                {{ form.text }}
+            </div>
+            </td>
+            <td>
+            <button style="margin-top:5px;font-size: 20px;" value="Go" type="button" id="loadpage" class="tiny button">Go</button>
+            </td>
+            </table>
+            <center>
+            <table style="margin-top:-50px;border:none">
+            <tr>
+            <td>
+                <input type="checkbox" class="text" style="-moz-appearance:none;width:30px;height:30px;" name="text" value="text">
+            </td>
+            <td>
+                <label style="margin-left:-10px;margin-bottom:15px;font-size:20px">Text</label>
+            </td>
+            <td>
+                <input type="checkbox" class="image" style="-moz-appearance:none;width:30px;height:30px;" name="image" value="image">
+            </td>
+            <td>
+                <label style="margin-left:-10px;margin-bottom:15px;font-size:20px">Image</label>
+            </td>
+            <td>
+                <input type="checkbox" class="video" style="-moz-appearance:none;width:30px;height:30px;" name="video" value="video">
+            </td>
+            <td>
+                <label style="margin-left:-10px;margin-bottom:15px;font-size:20px">Video</label>
+            </td>
+            <td>
+                <input type="submit" style="font-size: 20px;margin-bottom:15px;" value="Execute" class="tiny button">
+            <!--<button style="margin-top:5px;font-size: 20px;" value="Execute" type="button" id="execute" class="tiny button">Execute</button>-->
+            </td>
+            </tr>
+            </table>
+            </center>
+            </form>
+    </div>
+</div>
+<!-- The feed -->
+<div class="row white">
+    <div class="columns large-12">
+        <div style="margin-left:20px" id="talk">
+            <!--{% for post in all_posts %}
+                <li>
+                    <strong>{{ post.text }}</strong> -
+                    <em>{{ post.author }}</em> -
+                    <span>{{ post.created }}</span> -
+                    <a id='delete-post-{{post.id}}'>delete me</a>
+                </li>
+            {% endfor %}
+        -->
+        </div>
+    </div>
+</div>
+<script src="http://202.169.224.53/static/scripts/main.js"></script>
+{% endblock %}
